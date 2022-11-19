@@ -3,6 +3,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+	height: 100vh;
+	width: 100%;
 }
 
 .outterContainer {
@@ -136,6 +138,17 @@
 	color: white;
 	cursor: pointer;
 }
+.homeBody .sideNavigation .icon{
+	width: 100%;
+}
+.homeBody .sideNavigation .icon .img{
+	max-width: 100%;
+	padding: 10px;
+	filter: grayscale(1) invert(1);
+}
+.homeBody .sideNavigation .navigation.active .icon .img{
+	filter: grayscale(1);
+}
 .homeBody .sideNavigation .label{
 	font-size: 18px;
 }
@@ -144,6 +157,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	text-align: center;
 }
 .homeBody .sideNavigation .navigation.active{
 	background-color: rgba(255,232,159, 0.85);
@@ -159,6 +173,7 @@
 	position: relative;
 	margin: 15px;
 	margin-left: 0;
+	padding: 15px 25px;
 	background-color: rgba(255,232,159, 0.85);
 	width: 100%;
 }
@@ -228,4 +243,242 @@
 	position: absolute;
 	bottom: 70px;
 	right: 34%;
+}
+.locationResultPage .filtersPart{
+	width:fit-content;
+	display: flex;
+	justify-content: center;
+	font-size: 16px;
+	border: 1px solid #000000;
+	margin-bottom: 20px;
+	padding: 0px 10px;
+	background-color: rgb(143,55,1);
+	color: white;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+.locationResultPage .filtersPart >*{
+	margin: 4px;
+}
+.locationResultPage .filtersPart .label{
+	font-weight: bold;
+}
+.locationResultPage .filtersPart .symbol{
+	height: 8px;
+	margin: auto;
+	
+}
+.label{
+	font-weight: bold;
+}
+.carTile{
+	display: flex;
+	height:100px;
+	background-color: rgb(252, 237, 190);
+	box-shadow: 0 1px 2px 0 black, 0 2px 5px 0 black;
+	border: thin solid black;
+	border-radius: 4px;
+	margin: 10px 0px;
+}
+.carType{
+	width: 3%;
+	text-align: center;
+	border-right: thin solid black;
+	writing-mode: vertical-rl;
+	font-size: 16px;
+	color: white;
+	text-shadow: 1px 1px 2px black;
+}
+.carType.hatchback{
+	background-color: green;
+}
+.carType.sedan{
+	background-color: blue;
+}
+.carType.suv{
+	background-color: black;
+}
+.carSymbol{
+	height: 100%;
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
+}
+.carSymbol .carIcon{
+	max-width: 100%;
+}
+.carDetails{
+	display: flex;
+	width:72%
+}
+.carDetails .tileHeader{
+	width: 65%;
+	text-align: center;
+	padding: 20px;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 24px;
+	font-weight: bold;
+}
+.carDetails .tileBody{
+	width: 35%;
+	padding: 20px;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 14px;
+}
+
+.signInPage{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.signInPage .background{
+	position: absolute;
+	filter: grayscale(100%);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.4;
+}
+.signUpPage{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.signUpPage .background{
+	position: absolute;
+	filter: grayscale(100%);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.4;
+}
+.signUpPage .otherOptions{
+	visibility: hidden;
+}
+.formPagesContainer{
+	width:100%;
+	height: 100%;
+}
+.formContainer{
+	width: 40%;
+	height: fit-content;
+	padding: 25px;
+	padding-bottom: 40px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: antiquewhite;
+	border: 2px solid black;
+	box-shadow: 0 2px 4px 0 rgb(255,232,159), 0 3px 10px 0 rgb(255,232,159);
+}
+.signInPage .formContainer .background{
+	position: absolute;
+	left: auto;
+	right: 40px;
+	opacity: 45%;
+	height: 70%;
+	width: 30%;
+	bottom: 30%;
+	top: 25px;
+	pointer-events: none;
+}
+.signUpPage .formContainer .background{
+	position: absolute;
+	left: auto;
+	right: 40px;
+	opacity: 45%;
+	height: 60%;
+	width: 35%;
+	bottom: 30%;
+	top: 35px;
+	pointer-events: none;
+}
+.formContainer .content{
+	
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: antiquewhite;
+	
+}
+
+.formContainer .heading{
+	font-weight: lighter;
+	font-size: 28px;
+}
+.form{
+	width: 80%;
+	padding-top: 10px;
+	z-index: 1;
+	background-color: inherit;
+}
+.formContainer .inputField{
+	width: 100%;
+	display: block;
+	padding: 5px;
+	font-size: 14px;
+	border: 1px solid black;
+}
+.formContainer .cell{
+	padding: 0 15px;
+}
+.formLabel{
+	margin-bottom: 0;
+	font-weight: 700;
+	font-size: 12px;
+}
+.requiredFieldsIndicator{
+	color: red;
+}
+.formContainer .row{
+	display: flex;
+}
+.formContainer .row .cell{
+	width: 50%;
+}
+
+.formContainer .rightChild{
+	width: 20%;
+	float: right;
+	padding-right: 10px;
+}
+.formContainer .rightChild .button{
+	margin-left: 10px;
+	padding: 5px 0px;
+	text-align: center;
+	font-size: 16px;
+	border: none;
+	width: 100%;
+	cursor: pointer;
+}
+.formContainer .buttons{
+	height:fit-content;
+}
+.formContainer .rightChild .button:hover{
+	background-color: rgb(220, 220, 220);
+}
+.formContainer .rightChild .submit{
+	background-color: rgb(70, 140, 0);
+	color: white;
+}
+.formContainer .rightChild .submit:hover{
+	background-color: rgb(50, 120, 0);
+}
+
+.formContainer.active{
+	display: block;
+}
+.errorMsg{
+	color: red;
+    font-size: 12px;
+    height: 20px;
+    display: block;
 }
