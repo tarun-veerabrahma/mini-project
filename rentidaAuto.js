@@ -24,3 +24,24 @@ function handleSideNavigation(This, calledPagePart=''){
 	$(".pagePart").addClass("hide");
 	$("#"+calledPagePart).removeClass("hide");
 }
+function showCars(calledPagePart){
+	let location=$("#locationResult").attr('value');
+	$("#locationLabel").text(location);
+	$(".pagePart").addClass("hide");
+	$("#"+calledPagePart).removeClass("hide");
+}
+//JS for displaying form
+function displayForm(formPage){
+	$("#outterContainer").addClass("hide");
+	$("#formPagesContainer").removeClass("hide");
+	$("#formPagesContainer>*").addClass("hide");
+	$("#"+formPage).removeClass("hide");
+}
+function hideForm(){
+	$("#formPagesContainer").addClass("hide");
+	$("#formPagesContainer>*").addClass("hide");
+	$("#outterContainer").removeClass("hide");
+}
+function cancelForm(){
+	hideForm();
+}
