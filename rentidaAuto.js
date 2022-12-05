@@ -344,7 +344,15 @@ function addCar(){
 	setTempCarObj(values);
 	if(validation('addCarForm')){
 		displayLendCars();
-		if(!(tempCarObj['location'] in JSON.parse(localStorage['rentidaLocations']))){
+		let locFlag=0;
+		let loc = tempCarObj['location'];
+		for(let i=0;i<locations.length;i++){
+			if(locations[i]==loc){
+				locFlag = 1;
+				break;
+			}
+		}
+		if(!(locFlag)){
 			addLocation(tempCarObj['location']);
 		}
 		tempCarObj['mobile']=JSON.parse(sessionStorage['rentidaAutoUser'])['mobile'];
