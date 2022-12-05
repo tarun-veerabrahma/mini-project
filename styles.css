@@ -117,11 +117,13 @@
 	font-size: 18px;
 }
 .homeBody{
+	position:relative;
 	padding: 0px;
 	display: flex;
 	background-color: rgba(143,55,1, 0.85);
 	outline: 1px solid rgba(255,242,204, 0.85);
 	outline-offset: -5px;
+	height: 582px;
 }
 .homeBody .sideNavigation{
 	width: 30%;
@@ -224,6 +226,12 @@
 	padding: 5px 30px;
 	margin: 20px 30px;
 }
+.lenderPage .lendedCars{
+	position: absolute;
+	top: 77px;
+	left: 25px;
+	right:25px;
+}
 .lenderPage .empty{
 	position: absolute;
 	height: 66%;
@@ -244,7 +252,7 @@
 	bottom: 70px;
 	right: 34%;
 }
-.locationResultPage .filtersPart{
+.locationResultPage .filterLabel{
 	width:fit-content;
 	display: flex;
 	justify-content: center;
@@ -267,6 +275,39 @@
 	margin: auto;
 	
 }
+.locationResultPage .filtersPart .filterLabel{
+	position: relative;
+}
+.locationResultPage .filtersPart .filters{
+	position: absolute;
+	border: thin solid black;
+	border-radius: 4px;
+	background-color: white;
+	padding: 10px;
+	width: fit-content;
+}
+.locationResultPage .filtersPart .filters .filterOption .label{
+	font-size: 14px;
+	font-weight: normal;
+	margin-right: 4px;
+}
+.locationResultPage .filtersPart .filters .buttonsContainer .button{
+	font-size: 14px;
+	border: none;
+	padding: 2px 10px;
+}
+.locationResultPage .filtersPart .filters .buttonsContainer .button.accept{
+	color: white;
+	background-color: black;
+}
+
+.locationResultPage .locationContainer{
+	height: 28px;
+	font-size: 18px;
+}
+.locationResultPage .locationContainer .icon{
+	height: 100%;
+}
 .label{
 	font-weight: bold;
 }
@@ -279,7 +320,7 @@
 	border-radius: 4px;
 	margin: 10px 0px;
 }
-.carType{
+.carType.indicator{
 	width: 3%;
 	text-align: center;
 	border-right: thin solid black;
@@ -330,6 +371,69 @@
 	justify-content: center;
 	font-size: 14px;
 }
+.carDetailsPage{
+	padding: 25px;
+}
+.carDetailsPage .header{
+	margin: 20px 30px 5px 30px;
+	font-size: 48px;
+	color: black;
+}
+.carDetailsPage .detail{
+	margin: 5px 45px;
+}
+.carDetailsPage .buttonsContainer{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+.carDetailsPage .buttonsContainer .button{
+	background-color: rgb(143,55,1);
+	border: 2px solid black;
+	color: white;
+}
+
+.ownerDetails{
+	position: absolute;
+	outline-offset: -5px;
+	outline: 1px solid antiquewhite;
+	top:10%;
+	left:25%;
+	z-index: 2;
+	height: 80%;
+	width: 60%;
+	color:white;
+	background-color: rgb(143,55,1);
+}
+.ownerDetails .main{
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+}
+.ownerDetails .cancel{
+	display: flex;
+	justify-content: right;
+	margin-right: 10px;
+	margin-top: 10px;
+	height: 10%;
+}
+.ownerDetails .cancel .image{
+	height: 100%;
+	filter: grayscale(1) invert(1);
+	
+}
+
+.ownerDetails .logoImage{
+	display: flex;
+	justify-content: center;
+	height: 50%;
+}
+.ownerDetails .logoImage .image{
+	height: 100%;
+	filter: grayscale(1) invert(1);
+}
+
 
 .signInPage{
 	position: relative;
@@ -361,6 +465,21 @@
 }
 .signUpPage .otherOptions{
 	visibility: hidden;
+}
+.addCarPage{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	
+}
+.addCarPage .background{
+	position: absolute;
+	filter: grayscale(100%);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.4;
 }
 .formPagesContainer{
 	width:100%;
@@ -401,6 +520,17 @@
 	top: 35px;
 	pointer-events: none;
 }
+.addCarPage .formContainer .background{
+	position: absolute;
+	left: auto;
+	right: 40px;
+	opacity: 45%;
+	height: 60%;
+	width: 40%;
+	bottom: 30%;
+	top: 20px;
+	pointer-events: none;
+}
 .formContainer .content{
 	
 	width: 100%;
@@ -426,6 +556,7 @@
 	padding: 5px;
 	font-size: 14px;
 	border: 1px solid black;
+		
 }
 .formContainer .cell{
 	padding: 0 15px;
@@ -478,7 +609,56 @@
 }
 .errorMsg{
 	color: red;
-    font-size: 12px;
+    font-size: 14px;
     height: 20px;
     display: block;
+}
+.returnSymbol{
+	height: 10%;
+}
+
+.aboutUs{
+	margin-top: 25px;
+	position:relative;
+	padding: 30px;
+	
+	background-color: rgba(143,55,1, 0.85);
+	outline: 1px solid rgba(255,242,204, 0.85);
+	outline-offset: -5px;
+}
+
+.aboutUs .title{
+	color: white;
+	margin-top: 10px;
+	font-family: "Bahnschrift light";
+}
+
+.aboutUs .content{
+	background-color: rgba(255,242,204, 0.85);
+	padding: 10px;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.7), 0 3px 10px 0 rgba(0, 0, 0, 0.7);
+}
+
+.contactUs{
+	margin-top: 25px;
+	position:relative;
+	padding: 30px;
+	
+	background-color: rgba(143,55,1, 0.85);
+	outline: 1px solid rgba(255,242,204, 0.85);
+	outline-offset: -5px;
+}
+
+.contactUs .title{
+	color: white;
+	margin-top: 10px;
+	font-family: "Bahnschrift light";
+}
+
+.contactUs .content{
+	background-color: rgba(255,242,204, 0.85);
+	padding: 10px;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.7), 0 3px 10px 0 rgba(0, 0, 0, 0.7);
 }
