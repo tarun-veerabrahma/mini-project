@@ -231,6 +231,8 @@
 	top: 77px;
 	left: 25px;
 	right:25px;
+	overflow: auto;
+	max-height: 80%;
 }
 .lenderPage .empty{
 	position: absolute;
@@ -251,6 +253,9 @@
 	position: absolute;
 	bottom: 70px;
 	right: 34%;
+}
+.locationResultPage{
+	overflow: auto;
 }
 .locationResultPage .filterLabel{
 	width:fit-content;
@@ -307,6 +312,10 @@
 }
 .locationResultPage .locationContainer .icon{
 	height: 100%;
+}
+.locationResultPage .carTilesPart{
+	overflow: auto;
+	max-height: 80%;
 }
 .label{
 	font-weight: bold;
